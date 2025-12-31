@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Tech studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header__inner">
+      <div class="logo">3D Tech</div>
+      <nav class="nav">
+        <a href="#home">Главная</a>
+        <a href="#about">Наши проекты</a>
+        <a href="#attractions">О нас</a>
+        <a href="#contact">Контакты</a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="container">
+      <h1>Мы студия по трехмерной визуализации 3D Tech</h1>
+      <p>Моделирование • Ретопология • UV-развертка • Текстурирование</p>
+      <button class="btn-primary">Узнать о нас больше</button>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section__title">О нашей студии</h2>
+      <div class="grid">
+        <div class="grid__item">
+          <img src="img\images\WhatsApp Image 2025-12-30 at 16.34.52.jpeg"
+               sizes="(max-width:600px) 90vw,50vw"
+               width="800" height="600"
+               >
+        </div>
+        <div class="grid__item">
+          <h3>Мы в поисках 3Д художника!</h3>
+          <p>Мы занимаемся созданием анимационных проектов для игр. 
+            Все, что касается разработки персонажей и их анимации, относится к нам.
+            Скорее присоединяйся к нашей команде! Форма для отправки ниже.</p>
+          <ul class="features">
+            <li>Создание скульптов персонажей</li>
+            <li>Ретопология моделей</li>
+            <li>Создание развертки для персонажа для нанесения текстур</li>
+            <li>Текстурирование</li>
+            <li>Риг и рисование весов</li>
+            <li>Анимация</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="attractions" class="section section--gray">
+    <div class="container">
+      <h2 class="section__title">Условия принятия на работу</h2>
+      <div class="cards">
+        <div class="card">
+          <img src="img\images\WhatsApp Image 2025-12-30 at 16.59.06.jpeg" alt="Иметь опыт работы в программах">
+          <h3>Иметь опыт работы в программах</h3>
+          <p>Мы ценим людей, которые умеют пользоваться не одним пакетом, а несколькими. Это сильно упрощает задачи и экономит время.</p>
+          <strong>Blender, Maya, ZBrush, Substance Painter</strong>
+        </div>
+        <div class="card">
+          <img src="img\images\WhatsApp Image 2025-12-30 at 17.26.22.jpeg" alt="Быть коммуникабельным">
+          <h3>Быть коммуникабельным</h3>
+          <p>Быть готовым взаимодействовать с разными специалистами одного конвеера-навык, который даст вам множество привелегий и возможностей</p>
+          <strong>Коммуникабельность-билет к пониманию и эффективности</strong>
+        </div>
+        <div class="card">
+          <img src="img\images\WhatsApp Image 2025-12-30 at 17.02.27.jpeg" alt="Навыки и портфолио">
+          <h3>Навыки и портфолио</h3>
+          <p>Чтобы стать хорошим кандидатом на место в нашей студии, у вас доолжно быть много работ за плечами разного уровня сложности!</p>
+          <strong>Навык=ошибки и опыт</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="container">
+      <h2 class="section__title">Связаться с нами</h2>
+      <div class="contact">
+        <div class="contact__info">
+          <p>Отправляйте свое портфолио!</p>
+          <p><strong>Телефон:</strong> +7 999 888 5500</p>
+          <p><strong>Email:</strong> tech3d@gmail.com</p>
+          <p><strong>Telegram:</strong> @tech3D</p>
+        </div>
+        <form class="form">
+          <input type="text" placeholder="Ваше имя" required>
+          <input type="tel" placeholder="Телефон" required>
+          <textarea placeholder="Сообщение" rows="5"></textarea>
+          <button type="submit" class="btn-primary">Отправить заявку</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 3D Tech studio 2025</p>
+    </div>
+  </footer>
+
+  <script defer src="js/lazy.sections.js"></script>
+  <script type="module" defer src="js/vitals.js"></script>
+  <script>
+    (function registerSW(){
+      if (!('serviceWorker' in navigator)) return;
+      try {
+        var isLocal = location.hostname === 'localhost' || location.hostname === '127.0.0.1';
+        var isSecure = location.protocol === 'https:';
+        if (isSecure || isLocal) {
+          navigator.serviceWorker.register('sw.js').catch(function(err){
+            console.warn('ServiceWorker registration failed:', err);
+          });
+        } else {
+          console.info('Skipping ServiceWorker registration: insecure origin');
+        }
+      } catch (e) {
+        console.warn('ServiceWorker registration error', e);
+      }
+    })();
+  </script>
+
+</body>
+</html>
